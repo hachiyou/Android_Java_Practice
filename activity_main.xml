@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding = "8dp"
+    tools:context="com.example.lin.justjava.MainActivity">
+
+    <!-- Text View that display the label "Quantity" */ -->
+    <TextView
+        android:id="@+id/Quantity_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom = "16dp"
+        android:textSize = "16sp"
+        android:text="QUANTITY" />
+
+    <!-- Collections of views that represent the quantities to be updated. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal">
+        <!-- View that displays the increment button -->
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text = "+"
+            android:layout_marginBottom = "16dp"
+            android:layout_marginRight = "16dp"
+            android:onClick = "increment"
+            />
+        <!--  View that displays the actual quantity value -->
+        <TextView
+            android:id="@+id/Quantity_Num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "0"
+            android:textColor = "#000000"
+            android:layout_marginBottom = "16dp"
+            android:textSize = "16sp"
+            />
+        <!-- View that displays the decrement button -->
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text = "-"
+            android:layout_marginBottom = "16dp"
+            android:layout_marginLeft = "16dp"
+            android:onClick = "decrement"
+            />
+    </LinearLayout>
+
+    <!-- View that displays the label "PRICE" -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "PRICE"
+        android:layout_marginBottom = "16dp"
+        android:textSize = "16sp"
+        />
+
+    <!-- View that displays the updated total price value -->
+    <TextView
+        android:id = "@+id/price_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "$0.00"
+        android:textColor = "#000000"
+        android:layout_marginBottom = "16dp"
+        android:textSize = "16sp"
+        />
+
+    <!-- View that displays the update button -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Update"
+        android:layout_below="@+id/Quantity_Num"
+        android:onClick = "update"
+        />
+
+</LinearLayout>
